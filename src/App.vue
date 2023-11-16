@@ -3,11 +3,8 @@ import TopBar from './components/TopBar.vue'
 </script>
 
 <template>
-<div class="home">
-  <TopBar />
-</div>
+  <div class="home">
+    <TopBar />
+  </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
