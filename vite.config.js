@@ -6,13 +6,21 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-  ],
+  plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  server: {
+    proxy: {
+      //  '/somepage.html': {
+      '^/sell/.*\\.html$': {
+        target: 'http://127.0.0.1:5173',
+        changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/sell\/.*\.html$/, '/index.html')
+        rewrite: (path) => '/'
+      }
     }
   }
 })

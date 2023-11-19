@@ -1,4 +1,36 @@
 @charset "UTF-8";
+/******************************* 重置浏览器 结束 *******************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin-inline-start: 0px;
+}
+
+a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+li,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/******************************* 重置浏览器 结束 *******************************/
+/******************************* 原址公共样式 开始 *******************************/
 .fl {
   float: left;
 }
@@ -19,9 +51,29 @@
   visibility: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/******************************* 原址公共样式 结束 *******************************/
 /******************************* 重置Element Plus 开始 *******************************/
 .el-popper.is-light {
   border: none !important;
 }
 
 /******************************* 重置Element Plus 结束 *******************************/
+/******************************* 全局CSS变量 开始 *******************************/
+:root {
+  --nav-active: #ffa429;
+  --link-active: #ff7808;
+  --down-active: #ff9300;
+}
+
+/******************************* 全局CSS变量 结束 *******************************/

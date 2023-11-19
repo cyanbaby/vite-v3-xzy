@@ -1,9 +1,8 @@
 <template>
-  <div>
-
-    <el-dropdown popper-class="personal-center">
+  <div class="user-profile app-top-bar__item">
+    <el-dropdown popper-class="user-profile-dropdown">
       <span class="el-dropdown-link">
-        Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+        个人中心<el-icon class="el-icon--right"><arrow-down /></el-icon>
       </span>
       <template #dropdown>
         <dl class="nav-child cus-scroll-bar" data-v-2ab9bd10="">
@@ -112,81 +111,84 @@
   </div>
 </template>
 
+  
 <style lang="scss" scoped>
-.el-scrollbar {
+
+.user-profile-dropdown {
   // width: 540px;
-}
+  .nav-child {
+    background: #fff;
+    // box-shadow: 0 3px 12px 1px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
 
-.nav-child {
-  background: #fff;
-  // box-shadow: 0 3px 12px 1px rgba(0, 0, 0, .1);
-  box-sizing: border-box;
+    // display: none;
+    padding: 12px 0 13px 20px;
+    // position: absolute;
+    // right: 0;
+    // width: 540px;
+    // z-index: 100;
 
-  // display: none;
-  padding: 12px 0 13px 20px;
-  // position: absolute;
-  // right: 0;
-  // width: 540px;
-  // z-index: 100;
-
-  .child-dd {
-    margin-inline-start: 0px;
-    color: #666;
-    font-family: PingFang SC-Regular, PingFang SC;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: center;
-
-    .child-tit {
-      float: left;
-      color: #333;
-      font-family: PingFang SC-Regular, PingFang SC;
-      font-size: 14px;
-      font-weight: 400;
-      margin-right: 26px;
-      min-width: 56px;
-      text-align: left;
-    }
-
-    .link-item {
+    .child-dd {
+      margin-inline-start: 0px;
+      color: #666;
       font-family: PingFang SC-Regular, PingFang SC;
       font-size: 12px;
       font-weight: 400;
+      line-height: 30px;
+      text-align: center;
 
-      a {
-        color: #666;
-        padding-right: 20px;
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
+      .child-tit {
+        float: left;
+        color: #333;
+        font-family: PingFang SC-Regular, PingFang SC;
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 26px;
+        min-width: 56px;
+        text-align: left;
+      }
 
-        &:hover {
-          color: #ff7808;
+      .link-item {
+        font-family: PingFang SC-Regular, PingFang SC;
+        font-size: 12px;
+        font-weight: 400;
+
+        a {
+          color: #666;
+          padding-right: 20px;
+          -webkit-text-decoration: underline;
+          text-decoration: underline;
+
+          &:hover {
+            color: var(--link-active);
+          }
         }
       }
     }
-  }
 
 
-  .login-out {
-    background: #efefef;
-    border: 1px solid #e0e0e0;
-    bottom: 18px;
-    color: #666;
-    height: 30px;
-    position: absolute;
-    right: 16px;
-    width: 86px;
-    border-radius: 17px 17px 17px 17px;
-    cursor: pointer;
-    &:hover {
-      color: #fff;
-      background: -webkit-gradient(linear, left top, left bottom, from(#fbc470), to(#f88929));
-      background: -webkit-linear-gradient(top, #fbc470, #f88929);
-      background: linear-gradient(180deg, #fbc470, #f88929);
-      border: 1px solid #fabf6b;
+    .login-out {
+      background: #efefef;
+      border: 1px solid #e0e0e0;
+      bottom: 18px;
+      color: #666;
+      height: 30px;
+      position: absolute;
+      right: 16px;
+      width: 86px;
+      border-radius: 17px 17px 17px 17px;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fbc470), to(#f88929));
+        background: -webkit-linear-gradient(top, #fbc470, #f88929);
+        background: linear-gradient(180deg, #fbc470, #f88929);
+        border: 1px solid #fabf6b;
+      }
     }
   }
 
 }
 </style>
+  
